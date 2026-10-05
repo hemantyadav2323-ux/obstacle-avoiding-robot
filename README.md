@@ -14,9 +14,15 @@ Built as the Tier 2 project of the Devotics Industrial Experience Program.
 
 ## Circuit Diagram
 
-![Circuit diagram](images/circuit.png)
+![Circuit diagram](circuit-off.png)
 
-![Schematic view](images/schematic.png)
+![Schematic view](schematic.png)
+
+## Simulation Running
+
+The Serial Monitor prints the distance and the current state while the simulation runs.
+
+![Simulation with Serial Monitor](circuit-On.png)
 
 ## Pin Connections
 
@@ -43,24 +49,20 @@ The 3-pin sensor uses a single SIG pin. The code sends a short pulse on that pin
 
 After the turn, the loop starts again and re-reads the distance. If the way is clear, the robot goes forward. If not, it repeats the sequence.
 
-The current state and the distance are printed to the Serial Monitor at 9600 baud.
-
 ## How to Run
 
-1. Open the Tinkercad project (link below) and click Start Simulation.
-2. Open the Serial Monitor. It prints the distance and the state.
+1. Open the Tinkercad project and click Start Simulation.
+2. Open the Serial Monitor to see the distance and the state.
 3. Click the ultrasonic sensor to show the round obstacle, then drag it toward the sensor.
 4. Below 25 cm the robot goes through STOP, REVERSE and TURN. Move the obstacle away and it drives forward again.
 
-Tinkercad project: (link to be added)
-
-Code: [obstacle_avoider/obstacle_avoider.ino](obstacle_avoider/obstacle_avoider.ino)
+Code: [obstacle_avoider.ino](obstacle_avoider.ino)
 
 ## Possible Improvements
 
 - Mount the sensor on a servo to scan left and right and turn toward the clearer side
 - Use PWM on the L293D enable pins to slow down as the obstacle gets closer
-- Add a second sensor on each side for wall detection
+- Add side sensors for wall detection
 - Build the hardware version on a real chassis
 
 ## Author
